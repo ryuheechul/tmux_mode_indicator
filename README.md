@@ -5,6 +5,8 @@
 ![normal copy img](https://raw.githubusercontent.com/dominikduda/tmux_mode_indicator/master/images/normal_copy.png)
 ![prefix copy img](https://raw.githubusercontent.com/dominikduda/tmux_mode_indicator/master/images/prefix_copy.png)
 
+Plugin indicating normal/insert/prefix/copy modes. It is also available as segment for [tmux-powerline](https://github.com/erikw/tmux-powerline).
+
 ## Installation:
 ### Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
 
