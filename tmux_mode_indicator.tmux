@@ -9,6 +9,7 @@ __print_tmux_mode_indicator() {
   local separator="$(__get_tmux_option "@tmux_mode_indicator_separator" ":")"
   local left_edge_character="$(__get_tmux_option "@tmux_mode_indicator_left_edge_character" "")"
   local right_edge_character="$(__get_tmux_option "@tmux_mode_indicator_right_edge_character" "")"
+  # HERE
   local background="$(__get_tmux_option "@tmux_mode_indicator_background" "colour33")"
   local copy_mode_fg="$(__get_tmux_option "@tmux_mode_indicator_copy_mode_fg" "colour82")"
   local prefix_pressed_fg="$(__get_tmux_option "@tmux_mode_indicator_prefix_mode_fg" "colour226")"
@@ -24,7 +25,7 @@ __print_tmux_mode_indicator() {
   local prefix_indicator="#[bg=${background}]#{?client_prefix,#[fg=${prefix_pressed_fg}]${prefix_pressed_text},#[fg=${normal_fg}]${normal_mode_text}}"
   local separator="  #[fg=${separator_fg}]${separator}"
   local normal_or_copy_indicator="#[bg=${background}]#{?pane_in_mode,#[fg=${copy_mode_fg}]${copy_mode_text},#[fg=${normal_fg}]${insert_mode_text}}"
-  local right_edge_char="#[bg=${right_edge_character_bg},fg=${right_edge_character_fg}]$right_edge_character"
+  local right_edge_char="#[bg=${right_edge_character_bg},fg=${right_edge_character_fg}]${right_edge_character}"
 
   echo -n $left_edge_char
   echo -n " "
