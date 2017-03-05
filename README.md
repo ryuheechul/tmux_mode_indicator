@@ -83,7 +83,7 @@ Plugin updates slowly? Set set tmux status update time (`tmux-status-interval`) 
 
 ## Customization
 
-##### All customizations listed below should be pasted to your `.tmux.conf`
+##### All customizations listed below should be pasted at the top of your `.tmux.conf`
 
 Notes:
 - Some characters are tmux-special-characters and may not work.
