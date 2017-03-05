@@ -23,7 +23,7 @@ Clone the repo:
 
 Add this line to the bottom of `.tmux.conf`:
 
-    run-shell ~/clone/path/battery.tmux
+    run-shell ~/clone/path/tmux_mode_indicator.tmux
 
 Reload TMUX environment:
 
