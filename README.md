@@ -47,9 +47,9 @@ By default powerline characters are disabled for compatibility. If u want to ena
 
 If you want to display something else in the right status just add it before/after `#{tmux_mode_indicator}`:
 
-    set -g status-right ' %d/%m #[fg=colour233,bg=colour245,bold] %H:%M:%S '
+    set -g status-right '%d/%m #{tmux_mode_indicator} %H:%M:%S'
 
-It will produce following right status:
+It will produce following right status (if u set powerline characters as [quick start](#quick-start) says):
 
 ![example right status](https://raw.githubusercontent.com/dominikduda/tmux_mode_indicator/master/images/tmux_mode_indicator_with_date_and_hour.png)
 
