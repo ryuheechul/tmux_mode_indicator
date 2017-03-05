@@ -46,6 +46,29 @@ If u want to display something else in the right status just add it before/after
 
     set -g status-right ' %d/%m #[fg=colour233,bg=colour245,bold] %H:%M:%S '
 
+It will produce following right status:
+
+![example right status](https://raw.githubusercontent.com/dominikduda/tmux_mode_indicator/master/images/tmux_mode_indicator_with_date_and_hour.png)
+
+You can make it colorful:
+
+    set -g @tmux_mode_indicator_left_edge_character ""
+    set -g @tmux_mode_indicator_separator "✤"
+    set -g @tmux_mode_indicator_background "colour33"
+    set -g @tmux_mode_indicator_right_edge_character ""
+    set -g @tmux_mode_indicator_right_edge_character_fg "#8dc062"
+    set -g @tmux_mode_indicator_left_edge_character_bg "#deb863"
+    set -g @tmux_mode_indicator_after_interpolation_bg "#8dc062"
+    set -g @tmux_mode_indicator_after_interpolation_fg "#000000"
+
+    set -g status-right "#[bg=#626262,fg=#deb863]#[bg=#deb863,fg=#000000] %d/%m #{tmux_mode_indicator} %H:%M:%S "
+
+It will produce following right status:
+
+![example right status](https://raw.githubusercontent.com/dominikduda/tmux_mode_indicator/master/images/tmux_mode_indicator_with_date_and_hour_pretty.png)
+
+For API information see [customization](#customization) section.
+
 ## Customization
 
 ##### All customizations listed below should be pasted to your `.tmux.conf`
