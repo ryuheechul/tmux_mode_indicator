@@ -69,6 +69,16 @@ It will produce following right status:
 
 For API information see [customization](#customization) section.
 
+## Potential issues solutions:
+
+Plugin is cut on the right side? Enlarge `status-right-length`
+
+    set-option -g status-right-length 300
+
+Plugin updates slowly? Set set tmux status update time (`tmux-status-interval`) to 1 second.
+
+    set status-interval 1
+
 ## Customization
 
 ##### All customizations listed below should be pasted to your `.tmux.conf`
@@ -144,13 +154,3 @@ Change background color of character displayed on right edge of the indicator (u
 Change color of character displayed on right edge of the indicator (useful when you want to display something with specific colors after tmux_mode_indicator)
 
     set -g @tmux_mode_indicator_right_edge_character_fg "#colour7"
-
-## Potential issues solutions:
-
-Plugin is cut on the right side? Enlarge `status-right-length`
-
-    set-option -g status-right-length 300
-
-Plugin updates slowly? Set set tmux status update time (`tmux-status-interval`) to 1 second.
-
-    set status-interval 1
