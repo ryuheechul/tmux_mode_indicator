@@ -37,7 +37,7 @@ Put this in at the top of `.tmux.conf`:
 
     set -g status-right "#{tmux_mode_indicator}"
 
-By default powerline characters are disabled for compatibility. If u want to enable them (an make plugin look like it looks screens at the top) put this at the top of `.tmux.conf`:
+By default powerline characters are disabled for compatibility. If u want to enable them (an make plugin look like it looks on screens at the top) put this at the top of `.tmux.conf`:
 
     set -g @tmux_mode_indicator_left_edge_character ""
     set -g @tmux_mode_indicator_separator "✤"
