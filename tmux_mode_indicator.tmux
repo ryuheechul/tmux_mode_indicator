@@ -9,10 +9,9 @@ __print_tmux_mode_indicator() {
   local separator="$(__get_tmux_option "@tmux_mode_indicator_separator" ":")"
   local left_edge_character="$(__get_tmux_option "@tmux_mode_indicator_left_edge_character" "")"
   local right_edge_character="$(__get_tmux_option "@tmux_mode_indicator_right_edge_character" "")"
-  # HERE
   local background="$(__get_tmux_option "@tmux_mode_indicator_background" "colour33")"
   local copy_mode_fg="$(__get_tmux_option "@tmux_mode_indicator_copy_mode_fg" "colour82")"
-  local prefix_pressed_fg="$(__get_tmux_option "@tmux_mode_indicator_prefix_mode_fg" "colour226")"
+  local prefix_pressed_fg="$(__get_tmux_option "@tmux_mode_indicator_prefix_pressed_fg" "colour226")"
   local normal_fg="$(__get_tmux_option "@tmux_mode_indicator_normal_fg" "#000000")"
   local left_edge_character_bg="$(__get_tmux_option "@tmux_mode_indicator_left_edge_character_bg" "#626262")"
   local separator_fg="$(__get_tmux_option "@tmux_mode_indicator_separator_fg" $normal_fg)"
