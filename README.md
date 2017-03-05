@@ -6,7 +6,7 @@
 ![prefix copy img](https://raw.githubusercontent.com/dominikduda/tmux_mode_indicator/master/images/prefix_copy.png)
 
 ## Installation:
-### Intallation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
+### Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
 
 ```
 set -g @plugin 'dominikduda/tmux_mode_indicator'
@@ -42,7 +42,7 @@ By default powerline characters are disabled for compatibility. If u want to ena
 
 ## Other plugins/functions integration
 
-If u want to display something else in the right status just add it before/after `#{tmux_mode_indicator}`:
+If you want to display something else in the right status just add it before/after `#{tmux_mode_indicator}`:
 
     set -g status-right ' %d/%m #[fg=colour233,bg=colour245,bold] %H:%M:%S '
 
@@ -101,7 +101,7 @@ Change character displayed on left edge of the indicator
 
     set -g @tmux_mode_indicator_left_edge_character "X"
 
-Change character displayed on right edge of the indicator (by default empty string, usefull when you want to display something else after tmux_mode_indicator)
+Change character displayed on right edge of the indicator (by default empty string, useful when you want to display something else after tmux_mode_indicator)
 
     set -g @tmux_mode_indicator_right_edge_character "X"
 
@@ -121,7 +121,7 @@ Change default text color
 
     set -g @tmux_mode_indicator_normal_fg "#ff00ff"
 
-Change background color of character displayed on left edge of the indicator (usefull when you want to display something with specific colors after tmux_mode_indicator)
+Change background color of character displayed on left edge of the indicator (useful when you want to display something with specific colors after tmux_mode_indicator)
 
     set -g @tmux_mode_indicator_left_edge_character_bg "colour5"
 
@@ -129,19 +129,19 @@ Change separator color
 
     set -g @tmux_mode_indicator_separator_fg "colour5"
 
-Change color of text displayed after tmux_mode_indicator (usefull when you want to display something with specific colors after tmux_mode_indicator)
+Change color of text displayed after tmux_mode_indicator (useful when you want to display something with specific colors after tmux_mode_indicator)
 
     set -g @tmux_mode_indicator_after_interpolation_fg "#ffff00"
 
-Change background color of text displayed after tmux_mode_indicator (usefull when you want to display something with specific colors after tmux_mode_indicator)
+Change background color of text displayed after tmux_mode_indicator (useful when you want to display something with specific colors after tmux_mode_indicator)
 
     set -g @tmux_mode_indicator_after_interpolation_bg "colour6"
 
-Change background color of character displayed on right edge of the indicator (usefull when you want to display something with specific colors after tmux_mode_indicator)
+Change background color of character displayed on right edge of the indicator (useful when you want to display something with specific colors after tmux_mode_indicator)
 
     set -g @tmux_mode_indicator_right_edge_character_bg "#ff0000"
 
-Change color of character displayed on right edge of the indicator (usefull when you want to display something with specific colors after tmux_mode_indicator)
+Change color of character displayed on right edge of the indicator (useful when you want to display something with specific colors after tmux_mode_indicator)
 
     set -g @tmux_mode_indicator_right_edge_character_fg "#colour7"
 
@@ -154,5 +154,3 @@ Plugin is cut on the right side? Enlarge `status-right-length`
 Plugin updates slowly? Set set tmux status update time (`tmux-status-interval`) to 1 second.
 
     set status-interval 1
-
-
