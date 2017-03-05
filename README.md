@@ -30,7 +30,8 @@ Reload TMUX environment:
     # type this in terminal
     $ tmux source-file ~/.tmux.conf
 
-Add format string to `status-right` (look at "Quick start" section for that).
+Add format string to `status-right` (look at [quick start](#quick-start) section for that).
+
 
 ## Quick start
 Put this in at the top of `.tmux.conf`:
