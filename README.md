@@ -13,7 +13,7 @@ Plugin indicating normal/insert/prefix/copy modes. It is also available as segme
 ```
 set -g @plugin 'dominikduda/tmux_mode_indicator'
 ```
-Hit prefix + I to fetch the plugin and source it then add format string to `status-right` (look at "Quick start" section for that).
+Hit prefix + I to fetch the plugin and source it then add format string to `status-right` (look at [quick start](#quick-start) section for that).
 
 ### Manual Installation
 
