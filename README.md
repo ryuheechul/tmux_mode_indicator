@@ -80,7 +80,7 @@ Plugin is cut on the right side? Enlarge `status-right-length`
 
 Plugin updates slowly? Set set tmux status update time (`tmux-status-interval`) to 1 second.
 
-    set status-interval 1
+    set -g status-interval 1
 
 ## Customization
 
