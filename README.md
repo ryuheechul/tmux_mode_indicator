@@ -1,3 +1,5 @@
+![logo_with_title](https://raw.githubusercontent.com/dominikduda/config_files/master/logo_with_title.png)
+
 # tmux_mode_indicator
 
 ![normal insert img](https://raw.githubusercontent.com/dominikduda/tmux_mode_indicator/master/images/normal_insert.png)
