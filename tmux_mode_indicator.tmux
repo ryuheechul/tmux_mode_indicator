@@ -21,6 +21,7 @@ __print_tmux_mode_indicator() {
   local after_interpolation_bg="$(__get_tmux_option "@tmux_mode_indicator_after_interpolation_bg" "#626262")"
   local right_edge_character_bg="$(__get_tmux_option "@tmux_mode_indicator_right_edge_character_bg" $background)"
   local right_edge_character_fg="$(__get_tmux_option "@tmux_mode_indicator_right_edge_character_fg" "#626262")"
+
   local left_edge_char="#[fg=${background},bg=${left_edge_character_bg}]${left_edge_character}#[bg=${background},fg=${normal_fg}]"
   local separator="#[bg=${background}] #[fg=${separator_fg}]${separator}"
   local right_edge_char="#[bg=${right_edge_character_bg}, fg=${right_edge_character_fg}]${right_edge_character}"
