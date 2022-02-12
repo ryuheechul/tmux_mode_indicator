@@ -12,6 +12,8 @@ __print_tmux_mode_indicator() {
   local background="$(__get_tmux_option "@tmux_mode_indicator_background" "colour33")"
   local copy_mode_fg="$(__get_tmux_option "@tmux_mode_indicator_copy_mode_fg" "colour82")"
   local prefix_pressed_fg="$(__get_tmux_option "@tmux_mode_indicator_prefix_pressed_fg" "colour226")"
+  local prefix_pressed_bg="$(__get_tmux_option "@tmux_mode_indicator_prefix_pressed_bg" "colour33")"
+  local copy_mode_bg="$(__get_tmux_option "@tmux_mode_indicator_copy_mode_bg" "colour33")"
   local normal_fg="$(__get_tmux_option "@tmux_mode_indicator_normal_fg" "#000000")"
   local left_edge_character_bg="$(__get_tmux_option "@tmux_mode_indicator_left_edge_character_bg" "#626262")"
   local separator_fg="$(__get_tmux_option "@tmux_mode_indicator_separator_fg" $normal_fg)"
@@ -19,21 +21,18 @@ __print_tmux_mode_indicator() {
   local after_interpolation_bg="$(__get_tmux_option "@tmux_mode_indicator_after_interpolation_bg" "#626262")"
   local right_edge_character_bg="$(__get_tmux_option "@tmux_mode_indicator_right_edge_character_bg" $background)"
   local right_edge_character_fg="$(__get_tmux_option "@tmux_mode_indicator_right_edge_character_fg" "#626262")"
-
   local left_edge_char="#[fg=${background},bg=${left_edge_character_bg}]${left_edge_character}#[bg=${background},fg=${normal_fg}]"
-  local prefix_indicator="#[bg=${background}]#{?client_prefix,#[fg=${prefix_pressed_fg}]${prefix_pressed_text},#[fg=${normal_fg}]${normal_mode_text}}"
-  local separator="  #[fg=${separator_fg}]${separator}"
-  local normal_or_copy_indicator="#[bg=${background}]#{?pane_in_mode,#[fg=${copy_mode_fg}]${copy_mode_text},#[fg=${normal_fg}]${insert_mode_text}}"
-  local right_edge_char="#[bg=${right_edge_character_bg},fg=${right_edge_character_fg}]${right_edge_character}"
+  local separator="#[bg=${background}] #[fg=${separator_fg}]${separator}"
+  local right_edge_char="#[bg=${right_edge_character_bg}, fg=${right_edge_character_fg}]${right_edge_character}"
+  local prefix_indicator="#{?client_prefix,#[bg=${prefix_pressed_bg}],#[bg=${background}]}#{?client_prefix,#[fg=${prefix_pressed_fg}]${prefix_pressed_text},#[fg=${normal_fg}]${normal_mode_text}}"
+  local normal_or_copy_indicator="#{?pane_in_mode,#[bg=${copy_mode_bg}],#[bg=${background}]}#{?pane_in_mode,#[fg=${copy_mode_fg}]${copy_mode_text},#[fg=${normal_fg}]${insert_mode_text}}"
 
   echo -n $left_edge_char
   echo -n " "
   echo -n $prefix_indicator
-  echo -n " "
   echo -n $separator
   echo -n " "
   echo -n $normal_or_copy_indicator
-  echo -n " "
   echo -n $right_edge_char
   echo -n "#[bg=${after_interpolation_bg},fg=${after_interpolation_fg}]"
 }
