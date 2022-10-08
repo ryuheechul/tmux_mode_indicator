@@ -124,6 +124,14 @@ Change background color of tmux_mode_indicator
 
     set -g @tmux_mode_indicator_background "colour2"
 
+Change background color of prefixed_pressed_text
+
+    set -g @prefixed_pressed_bg "colour2"
+
+Change background color of copy_mode_text
+
+    set -g @copy_mode_bg "colour2"
+
 Change color of text displayed when in copy mode
 
     set -g @tmux_mode_indicator_copy_mode_fg "#ffffff"
